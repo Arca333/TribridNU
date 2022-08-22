@@ -259,3 +259,5 @@ webencodings                      0.5.1
 ```
 python3 -u Tribrid_pos.py
 ```
+## Downloading the PHEME-dataset
+Download the dataset from here: https://drive.google.com/drive/folders/15Fz7CcAsSNBBExsk4x86lYG3V4_Orifv?usp=sharing
