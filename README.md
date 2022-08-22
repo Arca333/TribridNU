@@ -18,6 +18,7 @@ jupyter notebook
 ```
 
 ## How to Install and use Tribrid_pos (https://github.com/karmaresearch/tribrid)
+- Download tribrid_master from the link above
 - Install python3 here: https://www.python.org/downloads/
 - make sure to have the following packages and their versions installed (or install the necessary ones by the errors Tribrid_pos gives):
 <details><summary>Packages List (long)</summary>
