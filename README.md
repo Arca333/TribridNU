@@ -20,7 +20,7 @@ jupyter notebook
 ## How to Install and use Tribrid_pos (https://github.com/karmaresearch/tribrid)
 - Download tribrid_master from the link above
 - Install python3 here: https://www.python.org/downloads/
-- make sure to have the following packages and their versions installed (or install the necessary ones by the errors Tribrid_pos gives):
+- Make sure to have the following packages and their versions installed (or install the necessary ones by the errors Tribrid_pos gives):
 <details><summary>Packages List (long)</summary>
 <p>
 argon2-cffi                       21.3.0
@@ -261,3 +261,44 @@ python3 -u Tribrid_pos.py
 ```
 ## Downloading the PHEME-dataset
 Download the dataset from here: https://drive.google.com/drive/folders/15Fz7CcAsSNBBExsk4x86lYG3V4_Orifv?usp=sharing
+
+
+## How to run the experiments
+### Data Preperation
+- Download all files from the repo
+- Make sure all the prerequisites above have been met
+- Run Jupyter Notebook by typing the following into the command prompt:
+```
+jupyter notebook
+```
+- Open the desired experiment from the TribridNU folder in Jupyter notebook.
+- In the second cell, after all imports, there will be 4 or 5 empty variables with a lot of comments around them. Fill the variables with the guide of the comments.
+- Run every cells up until the "Tribrid_pos for stance classification" header (some cells might take a while)
+- The database will be created at the earlier filled "export_destination" folder.
+
+### Stance Classifying
+- Open command prompt
+- Navigate to tribrid_pos
+- Make sure that tribrid_pos uses the newly created database
+- Run the following command:
+```
+python3 -u tribrid_pos.py
+```
+- Wait for Tribrid_pos to finish
+- Return to the same notebook
+
+**NOTE**: Sometimes, pandas creates a .tsv file, which causes errors with Tribrid_pos. To circumvent this problem, take the following steps:
+1. Open Google Sheets (https://docs.google.com/spreadsheets/u/0/?usp=direct_url)
+2. Create a Blank sheet (or open any sheet)
+3. Click on File -> Import
+4. Upload the faulty .tsv file
+5. Click on "Import Data"
+6. On the .tsv sheet, click on File -> Download -> Tab-seperated values (.tsv)
+7. Replace the old .tsv file with the new one to use for Tribrid_pos.
+
+### Weighing (only on Pheme-rumor dataset)
+- Run everything up until the header "Choosing the weighing system"
+- In the cell below, choose the weighing system by inputting the corresponding dataframe name into the "finaldf" variable.
+
+### Analysing
+- The rest of the notebook can be run until the end and analysed.
